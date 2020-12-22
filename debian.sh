@@ -10,7 +10,7 @@ if [ "$first" != 1 ];then
 		echo "Download Rootfs, this may take a while base on your internet speed."
 		case `dpkg --print-architecture` in
 		aarch64)
-			archurl="arm64" ;;
+			archurl="amd64" ;;
 		arm)
 			archurl="arm64" ;;
 		amd64)
@@ -56,7 +56,7 @@ command+=" -b debian-fs/root:/dev/shm"
 ## uncomment the following line to have access to the home directory of termux
 #command+=" -b /data/data/com.termux/files/home:/root"
 ## uncomment the following line to mount /sdcard directly to / 
-#command+=" -b /sdcard"
+command+=" -b /sdcard"
 command+=" -w /root"
 command+=" /usr/bin/env -i"
 command+=" HOME=/root"
