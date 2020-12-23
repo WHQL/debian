@@ -12,7 +12,7 @@ if [ "$first" != 1 ];then
 		aarch64)
 			archurl="amd64" ;;
 		arm)
-			archurl="arm64" ;;
+			archurl="armhf" ;;
 		amd64)
 			archurl="amd64" ;;
 		x86_64)
@@ -56,7 +56,7 @@ command+=" -b debian-fs/root:/dev/shm"
 ## uncomment the following line to have access to the home directory of termux
 #command+=" -b /data/data/com.termux/files/home:/root"
 ## uncomment the following line to mount /sdcard directly to / 
-command+=" -b /sdcard"
+#command+=" -b /sdcard"
 command+=" -w /root"
 command+=" /usr/bin/env -i"
 command+=" HOME=/root"
